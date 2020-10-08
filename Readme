@@ -1,7 +1,4 @@
-a. Name: Jiazhuo Xu
-b. USC ID: 9885066765
-
-c. Work: In this assignment, I created two parent TCP socket in AWS for client and monitor. And each parent socket can create a child socket to listen from the client and monitor. And AWS will also create two UDP socket for Backened-Server A and Backened-Server B. The client had two kinds of operations which are write and compute. When client sent write operation to AWS, the AWS sent the data to server A to write in the database. 
+Work: In this assignment, I created two parent TCP socket in AWS for client and monitor. And each parent socket can create a child socket to listen from the client and monitor. And AWS will also create two UDP socket for Backened-Server A and Backened-Server B. The client had two kinds of operations which are write and compute. When client sent write operation to AWS, the AWS sent the data to server A to write in the database. 
 d. 
     (1)client.c: The client sent write or compute operation to the AWS.
     (2)aws.c:  The AWS received the write operation from client and sent to the server A and monitor. Then, when the compute operation came, AWS sent the data to server A to search for the link ID and received the data from server A.And AWS sent the data to server B to compute. Also, after the AWS received the compute results from server B, it would send the results to the monitor and client.
